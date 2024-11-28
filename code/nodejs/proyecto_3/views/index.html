@@ -8,29 +8,43 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="./css/bootstrap.min.css" >
 
+        <script src="./js/axios.min.js"></script>
+
         <title>Hello, the world!</title>
     </head>
     <body>
         <div class="card">
             <div class="card-body">
-              This is some text within a card body.
+              Example 1 👍
             </div>
           </div>
 
-          <div class="card">
-            <div class="card-header">
-              Featured
+          <br>
+
+          <div class="container mt-5">
+            <h1 class="text-center mb-4">Datos JSON con Bootstrap</h1>
+            <div class="text-center mb-3">
+              <button id="loadData" class="btn btn-primary" onclick="test_axios();">Cargar Datos</button>
             </div>
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+
+            <!-- Indicador de carga -->
+            <div id="loading" class="text-center d-none">
+              <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Cargando...</span>
+              </div>
+              <p class="mt-2">Cargando datos, por favor espera...</p>
+            </div>
+
+            <div id="dataContainer" class="table-responsive">
+              <!-- Aquí se mostrará el JSON -->
             </div>
           </div>
+
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="./js/jquery.slim.min.js"></script>
         <script src="./js/umd/popper.min.js"></script>
         <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/main.js"></script>
     </body>
 </html>
